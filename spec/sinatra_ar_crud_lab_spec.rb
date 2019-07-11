@@ -108,8 +108,8 @@ describe "Magazine App" do
       expect(page.body).to include("this is even better than the last")
     end
  "/articles/#{@article2.id}/edit"
-  #     expect(find("[name=_method]", :visible => false).value).to match(/patch/i)
-  #   end
+      expect(find("[name=_method]", :visible => false).value).to match(/patch/i)
+    end
 
    end
 
