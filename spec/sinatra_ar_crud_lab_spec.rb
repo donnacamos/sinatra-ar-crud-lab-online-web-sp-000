@@ -97,13 +97,13 @@ describe "Magazine App" do
       expect(Article.last.title).to eq("Second Article!!")
     end
 
-    # it "redirects to '/articles/:id'" do
-    #   visit "/articles/#{@article2.id}/edit"
-    #   fill_in :content, :with => "this is even better than the last"
+    it "redirects to '/articles/:id'" do
+      visit "/articles/#{@article2.id}/edit"
+      fill_in :content, :with => "this is even better than the last"
 
  
-  #   it "submits the form via a patch request" do
-  #     visit     page.find(:css, "[type=submit]").click
+    it "submits the form via a patch request" do
+      visit     page.find(:css, "[type=submit]").click
       expect(page.current_path).to eq("/articles/#{@article2.id}")
       expect(page.body).to include("this is even better than the last")
     end
